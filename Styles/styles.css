@@ -38,6 +38,11 @@ body {
     overflow-x: hidden;
 }
 
+/* img {
+    max-width: 5%;
+    height: auto;
+
+} */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -123,11 +128,52 @@ body {
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
+    justify-content: space-between; /* left + center + right */
+    padding: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Left group (logo + text) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-logo {
+    max-height: 40px;
+    width: auto;
+}
+
+/* Center links */
+.nav-center {
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;  /* ensures it's centered */
+}
+
+.nav-center a {
+    color: var(--muted-foreground);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-center a:hover {
+    color: var(--foreground);
+}
+
+/* Right group (button only) */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
 
 .logo {
     font-size: 1.5rem;
@@ -137,26 +183,6 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: var(--muted-foreground);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.nav-links a:hover {
-    color: var(--foreground);
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 1rem;
 }
 
 .mobile-menu-btn {
@@ -293,7 +319,7 @@ body {
 }
 
 .feature-card {
-    background: rgba(240, 10, 3.9, 0.5);
+    background: rgba(98, 103, 255, 0.5);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(240, 3.7, 15.9, 0.5);
     border-radius: 0.75rem;
