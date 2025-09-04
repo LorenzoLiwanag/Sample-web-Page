@@ -14,7 +14,7 @@
     --muted: hsl(240, 3.7%, 15.9%);
     --muted-foreground: hsl(240, 5%, 64.9%);
     --accent: hsl(197, 71%, 52%);
-    --border: hsl(240, 3.7%, 15.9%);
+    --border: hsl(40, 3.7%, 15.9%2);
     --card: hsl(240, 10%, 3.9%);
     
     /* Gradients */
@@ -120,9 +120,9 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(6, 13, 87, 0.497);
+    background: (var(--foreground));
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
+    /* border-bottom: 1px solid var(--border); */
 }
 
 .nav-container {
@@ -319,9 +319,8 @@ body {
 }
 
 .feature-card {
-    background: rgba(98, 103, 255, 0.5);
+    background:hsl(263, 70%, 50.4%);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(240, 3.7, 15.9, 0.5);
     border-radius: 0.75rem;
     padding: 2rem;
     transition: var(--transition);
@@ -330,7 +329,7 @@ body {
 .feature-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-card);
-    background: rgba(240, 10, 3.9, 0.7);
+    background:hsl(240, 3.7%, 15.9%);
 }
 
 .feature-icon {
