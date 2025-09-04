@@ -289,8 +289,8 @@ body {
     animation: pulse 2s infinite;
 }
 
-/* Features Section */
-.features {
+/* Services Section */
+.Services {
     padding: 5rem 0;
 }
 
@@ -312,7 +312,7 @@ body {
     margin: 0 auto;
 }
 
-.features-grid {
+.Services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -557,7 +557,7 @@ body {
         padding: 0 1rem;
     }
     
-    .features-grid,
+    .Services-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
