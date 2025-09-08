@@ -131,7 +131,8 @@ body {
     justify-content: space-between;
     padding: 1.5rem;
     max-width: 1200px;
-    margin: auto;
+    margin-left:25%;
+    margin-right: 25%;
 }
 
 .mobile-view-menu-toggle {
