@@ -16,16 +16,16 @@
     --accent: hsl(197, 71%, 52%);
     --border: hsl(40, 3.7%, 15.9%2);
     --card: hsl(240, 10%, 3.9%);
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(263, 70%, 50.4%), hsl(197, 71%, 52%));
     --gradient-secondary: linear-gradient(135deg, hsl(240, 3.7%, 15.9%), hsl(240, 10%, 3.9%));
     --gradient-hero: linear-gradient(135deg, hsl(263, 70%, 50.4%) 0%, hsl(197, 71%, 52%) 100%);
-    
+
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(263, 70%, 50.4%, 0.3);
     --shadow-card: 0 8px 32px hsl(240, 10%, 3.9%, 0.5);
-    
+
     /* Transitions */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -134,19 +134,20 @@ body {
     margin: auto;
 }
 
-.mobile-view-menu-toggle{
+.mobile-view-menu-toggle {
     display: none;
     flex-direction: column;
-    gap:4px;
-    border:0;
+    gap: 4px;
+    border: 0;
     cursor: pointer;
     padding: 0.5rem;
     margin-left: 0.5rem;
 }
+
 .mobile-view-menu-toggle span {
-    width:22px;
+    width: 22px;
     height: 2px;
-    background:var(--foreground);
+    background: var(--foreground);
     display: block;
 }
 
@@ -166,7 +167,8 @@ body {
 .nav-center {
     display: flex;
     gap: 2rem;
-    margin: 0 auto;  /* ensures it's centered */
+    margin: 0 auto;
+    /* ensures it's centered */
 }
 
 .nav-center a {
@@ -335,7 +337,7 @@ body {
 }
 
 .feature-card {
-    background:hsl(263, 70%, 50.4%);
+    background: hsl(263, 70%, 50.4%);
     backdrop-filter: blur(8px);
     border-radius: 0.75rem;
     padding: 2rem;
@@ -345,7 +347,7 @@ body {
 .feature-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-card);
-    background:hsl(240, 3.7%, 15.9%);
+    background: hsl(240, 3.7%, 15.9%);
 }
 
 .feature-icon {
@@ -466,24 +468,36 @@ body {
 
 /* Animations */
 @keyframes bounce {
-    0%, 20%, 53%, 80%, 100% {
+
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
         transform: translate3d(-50%, 0, 0);
     }
-    40%, 43% {
+
+    40%,
+    43% {
         transform: translate3d(-50%, -10px, 0);
     }
+
     70% {
         transform: translate3d(-50%, -5px, 0);
     }
+
     90% {
         transform: translate3d(-50%, -2px, 0);
     }
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3;
     }
+
     50% {
         opacity: 1;
     }
@@ -491,46 +505,61 @@ body {
 
 /* Responsive Design */
 @media (min-width: 640px) {
+
     .hero-buttons,
     .cta-buttons {
         flex-direction: row;
     }
-    
+
     .nav-links {
         display: flex;
     }
 }
 
 @media (max-width: 768px) {
-  /* show hamburger */
-  .mobile-menu-btn { display: flex; }
 
-  /* hide the center links by default */
-  .nav-center {
-    position: absolute;
-    top: calc(100% + 8px);     /* below the fixed header */
-    left: 0;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    gap: 0;
-    background: var(--secondary);
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding: 0.5rem 1rem;
-    z-index: 999;              /* above content */
-  }
-  .nav-center a {
-    padding: 0.75rem 0.25rem;
-    color: var(--foreground);
-  }
+    /* show hamburger */
+    .mobile-menu-btn {
+        display: flex;
+    }
 
-  /* when toggled open */
-  .nav-center.open { display: flex; }
+    /* hide the center links by default */
+    .nav-center {
+        position: absolute;
+        top: calc(100% + 8px);
+        /* below the fixed header */
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background: var(--secondary);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 0.5rem 1rem;
+        z-index: 999;
+        /* above content */
+    }
 
-  /* keep left + right visible */
-  .nav-left { gap: 0.5rem; }
-  .nav-right { margin-left: auto; }
+    .nav-center a {
+        padding: 0.75rem 0.25rem;
+        color: var(--foreground);
+    }
+
+    /* when toggled open */
+    .nav-center.open {
+        display: flex;
+    }
+
+    /* keep left + right visible */
+    .nav-left {
+        gap: 0.5rem;
+    }
+
+    .nav-right {
+        margin-left: auto;
+    }
 }
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
@@ -550,101 +579,129 @@ html {
 
 .slide-img {
     height: 100;
-    width:250;
+    width: 250;
 }
 
 :root {
-  --slide-w: 250px;
-  --slide-h: 100px;
-  --slider-w: 960px;
-  --animation-speed: 40s;     
+    --slide-w: 250px;
+    --slide-h: 100px;
+    --slider-w: 960px;
+    --animation-speed: 40s;
 }
 
 .slide-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .slider {
-  background: white;     
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-  height: var(--slide-h);
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  width: min(var(--slider-w), 90vw);
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: var(--slide-h);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: min(var(--slider-w), 90vw);
 }
 
 .slider::before,
 .slider::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 120px; 
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .slider::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0));
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
 }
 
 .slider::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(0,0,0,0.35), rgba(0,0,0,0));
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
 }
 
 .slider-track {
-  display: flex;
-  align-items: center;
-  gap: 0;                  
-  width: max-content;         
-  animation: slider-scroll var(--animation-speed) linear infinite;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: max-content;
+    animation: slider-scroll var(--animation-speed) linear infinite;
 }
 
 .slide {
-  width: var(--slide-w);
-  height: var(--slide-h);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
+    width: var(--slide-w);
+    height: var(--slide-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
 }
 
 @keyframes slider-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(-1 * var(--slide-w) * 8)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-1 * var(--slide-w) * 8));
+    }
 }
 
 
+/* Center the inputs and keep them in two columns on larger screens */
 .contact-form {
     display: block;
+    /* keep the section simple */
 }
 
-.input-field {
-     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-  /* font-weight: 500; */
-  font-size: .8vw;
-  color: #fff;
-  background-color: rgb(28,28,30);
-  box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
-  /* border-radius: 0.4vw; */
-  border: none;
-  outline: none;
-  min-width: 200px;
-  transition: .4s;
-  margin-bottom:30px; 
-  margin-left: 10px;
-  
+.form-inputs-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    /* 2 columns */
+    gap: 1rem;
+    justify-content: center;
+    /* centers the grid tracks */
+    align-items: center;
+    max-width: 720px;
+    /* keeps it from stretching too wide */
+    margin: 0 auto;
+    /* centers the whole block */
 }
+
+/* Make inputs expand nicely but not overflow */
+.input-field {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    /* override the min-width that can cause overflow */
+    min-height: 56px;
+    /* more typical input height (optional) */
+    border-radius: 8px;
+    background-color: rgb(28, 28, 30);
+    box-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5), 0 0 0 .15vw transparent;
+    margin-bottom: 15px;
+    /* a little polish (optional) */
+}
+
+/* Stack on mobile */
+@media (max-width: 768px) {
+    .form-inputs-container {
+        grid-template-columns: 1fr;
+        /* one column */
+    }
+}
+
 
 .input-field:hover {
-  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+    box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
 }
 
 .input-field:focus {
-  box-shadow: 0 0 0 .15vw skyblue;
+    box-shadow: 0 0 0 .15vw skyblue;
 }
