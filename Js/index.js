@@ -1,9 +1,11 @@
-const btn = document.querySelector('.mobile-view-menu-toggle');
-  const menu = document.querySelector('#primary-nav');
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navCenter = document.querySelector('.nav-center');
+    console.log('init', !!menuIcon, !!navCenter); // should log true true
 
-  if (btn && menu) {
-    btn.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(isOpen));
-    });
-  }
+    if (menuIcon && navCenter) {
+      menuIcon.addEventListener('click', () => {
+        navCenter.classList.toggle('open');
+      });
+    }
+  });

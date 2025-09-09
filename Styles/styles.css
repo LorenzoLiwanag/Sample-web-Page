@@ -125,13 +125,23 @@ body {
     /* border-bottom: 1px solid var(--border); */
 }
 
+.menu-icon {
+    display: none;
+}
+.menu-icon-bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
     max-width: 1200px;
-    margin-left:25%;
+    margin-left: 25%;
     margin-right: 25%;
 }
 
@@ -515,50 +525,43 @@ body {
     .nav-links {
         display: flex;
     }
+
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1331px) {
 
     /* show hamburger */
-    .mobile-menu-btn {
-        display: flex;
+    header {
+        display: block;
     }
 
-    /* hide the center links by default */
-    .nav-center {
-        position: absolute;
-        top: calc(100% + 8px);
-        /* below the fixed header */
-        left: 0;
-        right: 0;
-        display: none;
-        flex-direction: column;
-        gap: 0;
-        background: var(--secondary);
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 0.5rem 1rem;
-        z-index: 999;
-        /* above content */
-    }
+  .menu-icon { 
+    display: block; 
+    position: relative;
+    z-index: 1001;           /* above the dropdown */
+  }
+  .nav-left, 
+  .nav-right {
+    display: none;
+  }
 
-    .nav-center a {
-        padding: 0.75rem 0.25rem;
-        color: var(--foreground);
-    }
-
-    /* when toggled open */
-    .nav-center.open {
-        display: flex;
-    }
-
-    /* keep left + right visible */
-    .nav-left {
-        gap: 0.5rem;
-    }
-
-    .nav-right {
-        margin-left: auto;
-    }
+  /* Dropdown menu (your center links) is off by default */
+  .nav-center {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: var(--secondary);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+  }
+  .nav-center.open { 
+    display: flex; 
+  }
 }
 
 /* Smooth scrolling */
