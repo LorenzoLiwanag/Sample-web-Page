@@ -549,18 +549,22 @@ body {
   /* Dropdown menu (your center links) is off by default */
   .nav-center {
     position: absolute;
-    top: 100%;
+    /* top: 100%; */
     left: 0; right: 0;
     display: none;
     flex-direction: column;
     gap: 0;
-    background: var(--secondary);
+    background: var(--primary);
     border-top: 1px solid rgba(255,255,255,0.08);
     padding: 0.5rem 1rem;
     z-index: 1000;
   }
   .nav-center.open { 
     display: flex; 
+  }
+
+  .nav-center-links{
+    margin-left:50px;
   }
 }
 
