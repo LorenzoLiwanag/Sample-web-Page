@@ -692,6 +692,7 @@ html {
     /* more typical input height (optional) */
     border-radius: 8px;
     background-color: rgb(28, 28, 30);
+    color:white;
     box-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5), 0 0 0 .15vw transparent;
     margin-bottom: 15px;
     /* a little polish (optional) */
