@@ -116,13 +116,17 @@ body {
 
 .menu-icon {
     display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding:0.5rem;
 }
 
 .menu-icon-bar {
     width: 35px;
     height: 5px;
     background-color: black;
-    margin: 6px 0;
+    margin: 4px 0;
+    border-radius: 2px;
 }
 
 .nav-container {
@@ -611,17 +615,30 @@ html {
         display: block;
     }
     .menu-icon { 
-        display: block; 
+        display: flex; 
         position: relative;
         z-index: 1001;
+        height: 64px; /* Match navbar height */
+        align-items: center;
+        justify-content: center;
     }
-    .nav-left, 
+    .menu-icon-bar {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .nav-right {
         display: none;
     }
     .nav-center {
         position: absolute;
         left: 0; right: 0;
+        top: 0; /* Remove gap between navbar and top */
         display: none;
         flex-direction: column;
         gap: 0;
@@ -629,6 +646,10 @@ html {
         border-top: 1px solid rgba(255,255,255,0.08);
         padding: 0.5rem 1rem;
         z-index: 1000;
+
+        max-height:1000;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
     }
     .nav-center.open { 
         display: flex; 
@@ -641,5 +662,11 @@ html {
 @media (max-width: 768px) {
     .form-inputs-container {
         grid-template-columns: 1fr;
+    }
+      .menu-icon {
+        display: flex;
+    }
+    .nav-left {
+        justify-content: flex-start;
     }
 }
